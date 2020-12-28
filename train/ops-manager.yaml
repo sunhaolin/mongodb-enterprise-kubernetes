@@ -1,0 +1,18 @@
+---
+apiVersion: mongodb.com/v1
+kind: MongoDBOpsManager
+metadata:
+  name: om
+spec:
+  replicas: 1
+  version: 4.2.12
+  adminCredentials: om-admin-secret
+  # Should match metadata.name
+  # in the Kubernetes secret
+  # for the admin user
+  externalConnectivity:
+    type: LoadBalancer
+  applicationDatabase:
+    members: 3
+    version: 4.2.2-ent
+    persistent: true
