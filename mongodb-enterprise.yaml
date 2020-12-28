@@ -210,7 +210,7 @@ spec:
       containers:
       - name: mongodb-enterprise-operator
         image: quay.io/mongodb/mongodb-enterprise-operator:1.9.0
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         args:
           - "-watch-resource=mongodb"
           - "-watch-resource=opsmanagers"
