@@ -236,7 +236,7 @@ spec:
             fieldRef:
               fieldPath: metadata.namespace
         - name: IMAGE_PULL_POLICY
-          value: Always
+          value: IfNotPresent
         # Database
         - name: MONGODB_ENTERPRISE_DATABASE_IMAGE
           value: quay.io/mongodb/mongodb-enterprise-database
@@ -261,4 +261,4 @@ spec:
         - name: INIT_APPDB_VERSION
           value: 1.0.5
         - name: OPS_MANAGER_IMAGE_PULL_POLICY
-          value: Always
+          value: IfNotPresent
