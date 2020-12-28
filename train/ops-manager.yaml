@@ -8,30 +8,6 @@ spec:
   replicas: 1
   version: 4.2.12
   adminCredentials: om-admin-secret
-  statefulSet:
-    spec:
-      # the Persistent Volume Claim will be created for each Ops Manager Pod
-      volumeClaimTemplates:
-        - metadata:
-            name: mongodb-versions
-          spec:
-            accessModes: [ "ReadWriteOnce" ]
-            resources:
-              requests:
-                storage: 2G
-      template:
-        spec:
-          containers:
-            - name: mongodb-ops-manager
-              volumeMounts:
-                - name: mongodb-versions
-                  # this is the directory in each Pod where all MongoDB
-                  # archives must be put
-                  mountPath: /mongodb-ops-manager/mongodb-releases
-
-
-  backup:
-    enabled: false
   # Should match metadata.name
   # in the Kubernetes secret
   # for the admin user
