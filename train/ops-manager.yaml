@@ -14,5 +14,5 @@ spec:
     type: LoadBalancer
   applicationDatabase:
     members: 3
-    version: 4.2.2-ent
+    # version: 4.2.2-ent
     persistent: true
