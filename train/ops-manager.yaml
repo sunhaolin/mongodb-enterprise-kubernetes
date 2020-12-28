@@ -13,6 +13,6 @@ spec:
   externalConnectivity:
     type: LoadBalancer
   applicationDatabase:
-    members: 1
+    members: 3
     # version: 4.2.2-ent
     persistent: true
