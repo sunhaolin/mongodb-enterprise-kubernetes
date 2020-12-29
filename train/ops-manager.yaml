@@ -12,7 +12,7 @@ spec:
   # in the Kubernetes secret
   # for the admin user
   externalConnectivity:
-    type: NodePort
+    type: LoadBalancer
   backup:
     enabled: false
   applicationDatabase:
